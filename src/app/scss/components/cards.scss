@@ -1,0 +1,118 @@
+@import "../abstracts/variables.scss";
+
+$padding: 3rem;
+$borderRadius: 6px;
+
+.card {
+    margin: 2rem;
+    background-color: var(--cardBackgroundColor);
+    border-color: transparent;
+    border-radius: $borderRadius;
+    box-shadow: var(--cardBoxShadow);
+
+    &__header {
+        display: flex;
+        padding: 2.75rem 3rem;
+        border-bottom: 1px solid var(--cardDividerColor);
+        align-items: center;
+
+        &--text {
+            margin-bottom: 0;
+        }
+
+        &--cta {
+            margin-left: auto;
+            color: var(--iconColor);
+
+            &:hover{
+                color: var(--subtextColor1);
+            }
+        }
+    }
+
+    &__content {
+        padding: $padding;
+
+        &.no-padding {
+            padding: 0;
+        }
+    }
+}
+
+.card-table {
+    & table {
+        width: 100%;
+        background: transparent;
+        border-collapse: separate;
+        border-spacing: 0 1.5rem !important;
+
+        & thead {
+            & tr {
+                &.mat-header-row {
+                    height: 3rem;
+                }
+
+                & th {
+                    border-bottom: none;
+                    padding: 0rem 1rem;
+                    color: rgba(var(--lightTextColorRGB), 0.5);
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color: var(--lightTextColor);
+                    }
+
+                    & .mat-sort-header-container {
+                        &.mat-sort-header-sorted {
+                            color: var(--lightTextColor);
+                        }
+
+                        & .mat-sort-header-button {
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            font-weight: 500;
+                            font-family: "Poppins";
+                        }
+
+                        & .mat-sort-header-arrow {
+                            color: var(--lightTextColor);
+                        }
+                    }
+                }
+            }
+        }
+
+        & tbody {
+            & tr {
+                background-color: var(--cardBackgroundColor);
+                border-color: transparent;
+                border-radius: $borderRadius;
+                box-shadow: var(--cardBoxShadow);
+                overflow: hidden;
+                vertical-align: baseline;
+
+                & td {
+                    font-size: 1.8rem;
+                    color: var(--subtextColor1);
+                    padding: 2.25rem 1rem;
+                    border-bottom: none;
+                    vertical-align: middle;
+                    background: var(--cardBackgroundColor);
+
+                    &:first-child {
+                        padding-left: 2rem;
+                        border-top-left-radius: $borderRadius;
+                        border-bottom-left-radius: $borderRadius;
+                    }
+                    &:last-child {
+                        padding-right: 2rem;
+                        border-top-right-radius: $borderRadius;
+                        border-bottom-right-radius: $borderRadius;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+$default-font-size: 1.7rem;
+
+h1,h2,h3,h4,h5,h6{
+    // color:var(--standardFontColor);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+h4{
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+h5{
+    font-size: 2rem;
+    font-weight: 400;
+}
+h6{
+    font-size: 2rem;
+    font-weight: 400;
+}

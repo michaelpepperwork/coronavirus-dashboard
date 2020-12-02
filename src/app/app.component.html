@@ -11,13 +11,8 @@
 
 <ng-template #showLoadingMask>
 
-    <div class="loading-container">
-
-        <mat-spinner diameter="30"></mat-spinner>
-        <p class="loading-container--text">
-            Loading Today's Statistics...
-        </p>
-
-    </div>
+    <loading-mask
+        [text]="'Loading Today Data...'">
+    </loading-mask>
 
 </ng-template>

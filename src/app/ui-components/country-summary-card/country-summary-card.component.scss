@@ -1,0 +1,139 @@
+@import "../../scss/abstracts/variables.scss";
+
+.country-card {
+    min-height: 20rem;
+    
+    &__header {
+        border-bottom: 1px solid var(--cardDividerColor);
+        padding: 0rem 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+
+        &--country {
+            margin-right: 2rem;
+            font-weight: 500;
+            color: var(--darkTextColor);
+            font-size: 2.2rem;
+        }
+
+        &--label {
+            color: var(--lightTextColor);
+        }
+    }
+    &--country {
+        margin: 2rem;
+    }
+
+    &__main-statistic {
+        margin: 2rem;
+    }
+
+    &__statistic-row {
+    }
+}
+
+.statistic {
+    display: grid;
+
+    &--label {
+        color: var(--lightTextColor);
+        margin-bottom: 1rem;
+    }
+
+    &--value {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &__progress-bar {
+        height: 1rem;
+        background-color: #9facbd;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        &--bar {
+            background-color: black;
+            height: 100%;
+            border-radius: inherit;
+        }
+    }
+
+    &__progress-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &--icon {
+            width: 2rem;
+            height: 2rem;
+            background: red;
+            margin-right: 1rem;
+            border-radius: 4px;
+        }
+
+        &--value {
+            margin-left: auto;
+        }
+    }
+
+    &.blue-yellow {
+        & .statistic__progress-bar {
+            background-color: #ff4081;
+
+            &--bar {
+                background-color: #0067dc;
+            }
+        }
+
+        & .statistic__progress-label--icon {
+            &.primary {
+                background-color: #0067dc;
+            }
+
+            &.secondary {
+                background-color: #ff4081;
+            }
+        }
+    }
+
+    &.red-purple {
+        & .statistic__progress-bar {
+            background-color: #a4243b;
+
+            &--bar {
+                background-color: red;
+            }
+        }
+
+        & .statistic__progress-label--icon {
+            &.primary {
+                background-color: #a4243b;
+            }
+
+            &.secondary {
+                background-color: red;
+            }
+        }
+    }
+
+    &.green-grey {
+        & .statistic__progress-bar {
+            background-color: #233d4d;
+
+            &--bar {
+                background-color: #61e294;
+            }
+        }
+
+        & .statistic__progress-label--icon {
+            &.primary {
+                background-color: #233d4d;
+            }
+
+            &.secondary {
+                background-color: #61e294;
+            }
+        }
+    }
+}

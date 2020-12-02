@@ -1,0 +1,133 @@
+<mat-card class="country-card">
+    <loading-mask *ngIf="isLoading; else showStatistics">
+    </loading-mask>
+
+
+    <ng-template #showStatistics>
+        <h3 class="country-card__header">
+            <span class="country-card__header--country">{{country.Country}}</span>
+            <span class="country-card__header--label">({{label}})</span>
+        </h3>
+
+        <mat-card-content>
+            <div class="country-card__main-statistic">
+                <div class="statistic blue-yellow">
+                    <span class="statistic--label">
+                        Total Confirmed Cases
+                    </span>
+                    <span class="statistic--value">
+                        {{country.TotalConfirmed | number:'1.0':'en-US'}}
+                    </span>
+
+                    <div class="statistic__progress-bar">
+                        <div class="statistic__progress-bar--bar"
+                            [style.width]="((country.TotalConfirmed -
+                            country.NewConfirmed) / country.TotalConfirmed) |
+                            percent">
+                        </div>
+                    </div>
+
+                    <div class="statistic__progress-label">
+                        <span class="statistic__progress-label--icon primary"></span>
+                        Previous Cases
+                        <span class="statistic__progress-label--value">{{country.TotalConfirmed
+                            - country.NewConfirmed | number:'1.0':'en-US'}}</span>
+                    </div>
+
+                    <div class="statistic__progress-label">
+                        <span class="statistic__progress-label--icon secondary"></span>
+                        New Cases
+                        <span class="statistic__progress-label--value">{{country.NewConfirmed
+                            | number:'1.0':'en-US'}}</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="country-card__statistic-row row">
+                <div class="col-6">
+                    <mat-card>
+                        <div class="statistic red-purple">
+                            <span class="statistic--label">
+                                Total Deaths
+                            </span>
+                            <span class="statistic--value">
+                                {{country.TotalDeaths | number:'1.0':'en-US'}}
+                            </span>
+
+                            <div class="statistic__progress-bar">
+                                <div class="statistic__progress-bar--bar"
+                                    [style.width]="((country.TotalDeaths -
+                                    country.NewDeaths) / country.TotalDeaths) |
+                                    percent"></div>
+                            </div>
+
+                            <div class="statistic__progress-label">
+                                <span class="statistic__progress-label--icon
+                                    secondary"></span>
+                                Previous Deaths
+                                <span class="statistic__progress-label--value">{{country.TotalDeaths
+                                    - country.NewDeaths | number:'1.0':'en-US'}}</span>
+                            </div>
+
+                            <div class="statistic__progress-label">
+                                <span class="statistic__progress-label--icon
+                                    primary"></span>
+                                New Deaths
+                                <span class="statistic__progress-label--value">{{country.NewDeaths
+                                    | number:'1.0':'en-US'}}</span>
+                            </div>
+
+
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-6">
+                    <mat-card>
+                        <div class="statistic green-grey">
+                            <span class="statistic--label">
+                                Total Recoveries
+                            </span>
+                            <span class="statistic--value">
+                                {{country.TotalRecovered |
+                                number:'1.0':'en-US'}}
+                            </span>
+
+                            <div class="statistic__progress-bar">
+                                <div class="statistic__progress-bar--bar"
+                                    [style.width]="((country.TotalRecovered -
+                                    country.NewRecovered) /
+                                    country.TotalRecovered)
+                                    | percent"></div>
+                            </div>
+
+                            <div class="statistic__progress-label">
+                                <span class="statistic__progress-label--icon
+                                    secondary"></span>
+                                Previous Recoveries
+                                <span class="statistic__progress-label--value">
+                                    {{country.TotalRecovered -
+                                    country.NewRecovered
+                                    | number:'1.0':'en-US'}}
+                                </span>
+                            </div>
+
+                            <div class="statistic__progress-label">
+                                <span class="statistic__progress-label--icon
+                                    primary"></span>
+                                New Recoveries
+                                <span class="statistic__progress-label--value">{{country.NewRecovered
+                                    | number:'1.0':'en-US'}}</span>
+                            </div>
+
+
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </mat-card-content>
+
+    </ng-template>
+
+</mat-card>

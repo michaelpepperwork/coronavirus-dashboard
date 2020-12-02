@@ -13,12 +13,16 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './pages/errors/not-found/not-found.component';
 import { environment } from 'src/environments/environment';
+import { CountrySummaryCardComponent } from './ui-components/country-summary-card/country-summary-card.component';
+import { LoadingMaskComponent } from './ui-components/loading-mask/loading-mask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    CountrySummaryCardComponent,
+    LoadingMaskComponent
   ],
   imports: [
     BrowserModule,

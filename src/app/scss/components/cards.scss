@@ -10,12 +10,11 @@ mat-card {
     text-align: center;
 
     &--header {
-        margin-bottom: 1.5rem;
-        font-size: 2rem;
+        color: var(--lightTextColor);
     }
 
     &--value {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     &--progress{

@@ -1,3 +1,5 @@
+@import '../abstracts/variables.scss';
+
 
 $default-font-size: 1.7rem;
 
@@ -31,5 +33,10 @@ h6{
 }
 
 .section-heading{
-  
+    color: var(--darkTextColor);
+    font-weight: 600 !important;
+    font-size: 1.7rem !important;
+    margin-bottom: 0.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px !important;
 }

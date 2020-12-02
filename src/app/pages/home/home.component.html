@@ -1,5 +1,5 @@
 <section>
-    <h1 class="section-heading">Global Trends</h1>
+    <h1 class="section-heading">Global Outlook</h1>
 
     <div class="row">
         <div class="col-2">
@@ -7,7 +7,8 @@
                 <h3 class="highlight-card--header">Newly Confirmed Cases</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.NewConfirmed : 0}}
+                    {{(globalSummary ? globalSummary.NewConfirmed : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -22,7 +23,8 @@
                 <h3 class="highlight-card--header">Total Confirmed Cases</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.TotalConfirmed : 0}}
+                    {{(globalSummary ? globalSummary.TotalConfirmed : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -37,7 +39,8 @@
                 <h3 class="highlight-card--header">New Deaths</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.NewDeaths : 0}}
+                    {{(globalSummary ? globalSummary.NewDeaths : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -52,7 +55,8 @@
                 <h3 class="highlight-card--header">Total Deaths</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.TotalDeaths : 0}}
+                    {{(globalSummary ? globalSummary.TotalDeaths : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -67,7 +71,8 @@
                 <h3 class="highlight-card--header">New Recoveries</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.NewRecovered : 0}}
+                    {{(globalSummary ? globalSummary.NewRecovered : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -82,7 +87,8 @@
                 <h3 class="highlight-card--header">Total Recoveries</h3>
                 <span *ngIf="isSummaryLoaded; else showLoader"
                     class="highlight-card--value">
-                    {{globalSummary ? globalSummary.TotalRecovered : 0}}
+                    {{(globalSummary ? globalSummary.TotalRecovered : 0) |
+                    number:'1.0':'en-US'}}
                 </span>
                 <ng-template #showLoader>
                     <div class="highlight-card--progress">
@@ -93,4 +99,44 @@
         </div>
 
     </div>
+</section>
+
+<section>
+    <h1 class="section-heading">Confirmed Cases</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <country-summary-card
+                [country]="countryWithMaxTotalCases"
+                [label]="'Most Confirmed Cases'">
+            </country-summary-card>
+        </div>
+        <div class="col-6">
+            <country-summary-card
+                [country]="countryWithMinTotalCases"
+                [label]="'Least Confirmed Cases'">
+            </country-summary-card>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h1 class="section-heading">Death Statistics</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <country-summary-card
+                [country]="countryWithMaxTotalDeaths"
+                [label]="'Highest Number of Deaths'">
+            </country-summary-card>
+        </div>
+        <div class="col-6">
+            <country-summary-card
+                [country]="countryWithMinTotalDeaths"
+                [label]="'Lowest Number of Deaths'">
+            </country-summary-card>
+        </div>
+    </div>
+
 </section>

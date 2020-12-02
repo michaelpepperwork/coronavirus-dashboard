@@ -7,6 +7,7 @@ import { SummaryPage } from 'src/app/models/summaryPage';
 import { Observable, Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { GET_SUMMARY_STATISTICS } from 'src/app/redux/statistics/actions';
+import { IStatisticsState } from 'src/app/redux/statistics/store';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class StatisticsService implements OnDestroy {
 
   private routes: RoutesPage;
   private subscriptionManager: Subscription = new Subscription();
+
+  allStatistics$: Observable<IStatisticsState>;
 
   constructor(@Inject('BACKEND_API_URL') private apiUrl: string,
     private apiService: ApiService,
@@ -25,6 +28,8 @@ export class StatisticsService implements OnDestroy {
         this.routes = routes;
       });
     this.subscriptionManager.add(routesSub);
+
+    this.allStatistics$ = this.ngRedux.select(['statistics']);
 
   }
 

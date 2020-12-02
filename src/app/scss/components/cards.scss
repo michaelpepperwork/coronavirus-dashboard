@@ -6,6 +6,33 @@ $borderRadius: 6px;
 mat-card {
 }
 
+.card {
+
+    &__header {
+        border-bottom: 1px solid var(--cardDividerColor);
+        padding: 0rem 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+        font-weight: 500 !important;
+        color: var(--darkTextColor);
+        font-size: 2.2rem !important;
+        display: flex;
+        align-items: center;
+
+        &--cta{
+            margin-left: auto;
+            margin-bottom: -3rem;
+        }
+    }
+
+    &__table{
+
+        & table{
+            width: 100%;
+        }
+    }
+}
+
 .highlight-card {
     text-align: center;
 
@@ -17,7 +44,7 @@ mat-card {
         font-size: 3.5rem;
     }
 
-    &--progress{
+    &--progress {
         margin-top: 2rem;
     }
 }

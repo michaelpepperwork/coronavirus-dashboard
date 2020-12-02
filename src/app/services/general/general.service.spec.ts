@@ -1,15 +1,14 @@
-import { NgRedux } from '@angular-redux/store';
 import { TestBed } from '@angular/core/testing';
-
-import { ApiService } from './api.service';
+import { GeneralService } from './general.service';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('ApiService', () => {
-  let service: ApiService;
+
+describe('GeneralService', () => {
+  let service: GeneralService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ApiService);
+    service = TestBed.inject(GeneralService);
   });
 
   it('should be created', () => {

@@ -1,17 +1,38 @@
-import { Component } from '@angular/core';
+import { GeneralService } from './services/general/general.service';
+import { Component, OnInit } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
+import { first } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'coronavirus-dashboard';
+export class AppComponent implements OnInit {
 
-  constructor(private logger: NGXLogger) {
-    this.logger.debug('Your log message goes here');
-    this.logger.debug('Multiple', 'Argument', 'support');
+  isLoading = true;
+
+  constructor(
+    private generalService: GeneralService,
+    private router: Router) { }
+
+  ngOnInit() {
+    this.loadBaseRoutes();
   }
+
+  loadBaseRoutes() {
+    this.generalService.loadBaseRoutes$()
+      .pipe(first())
+      .subscribe(
+        response => {
+          this.isLoading = false;
+        },
+        error => {
+          this.router.navigateByUrl('error-page');
+          this.isLoading = false;
+        });
+  }
+
 }
 

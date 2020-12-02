@@ -1,4 +1,23 @@
+<div *ngIf="!isLoading; else showLoadingMask" class="page-container">
+    <mat-toolbar color="primary">
+        <span>Coronavirus Dashboard</span>
+    </mat-toolbar>
 
-<mat-slide-toggle>Slide me!</mat-slide-toggle>
+    <main class="outlet-container">
+        <router-outlet></router-outlet>
+    </main>
 
-<router-outlet></router-outlet>
+</div>
+
+<ng-template #showLoadingMask>
+
+    <div class="loading-container">
+
+        <mat-spinner diameter="30"></mat-spinner>
+        <p class="loading-container--text">
+            Loading Today's Statistics...
+        </p>
+
+    </div>
+
+</ng-template>

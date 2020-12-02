@@ -3,7 +3,6 @@
   "rules": {
     "align": {
       "options": [
-        "parameters",
         "statements"
       ]
     },
@@ -28,7 +27,7 @@
       "app",
       "kebab-case"
     ],
-    "eofline": true,
+    "eofline": false,
     "import-blacklist": [
       true,
       "rxjs/Rx"
@@ -65,7 +64,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,

@@ -41,6 +41,7 @@ export class CountriesTableCardComponent implements OnInit, OnChanges, AfterView
 
   showCountryDetails(country: CountrySummary) {
     const dialogRef = this.dialog.open(CountrySummaryDialogComponent, {
+      width: '100%',
       data: {
         country
       }

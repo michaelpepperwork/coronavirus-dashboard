@@ -1,6 +1,8 @@
 <div *ngIf="!isLoading; else showLoadingMask" class="page-container">
     <mat-toolbar color="primary">
         <span>Coronavirus Dashboard</span>
+        <span class="example-spacer"> </span>
+        <span>Date: {{date | date: 'short'}}</span>
     </mat-toolbar>
 
     <main class="outlet-container">

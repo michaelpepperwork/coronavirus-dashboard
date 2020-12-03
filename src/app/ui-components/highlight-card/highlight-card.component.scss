@@ -1,0 +1,17 @@
+@import "../../scss/abstracts/variables.scss";
+
+.highlight-card {
+    text-align: center;
+
+    &--header {
+        color: var(--lightTextColor);
+    }
+
+    &--value {
+        font-size: 3.5rem;
+    }
+
+    &--progress {
+        margin-top: 2rem;
+    }
+}

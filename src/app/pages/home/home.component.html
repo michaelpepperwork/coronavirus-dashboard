@@ -3,99 +3,47 @@
 
     <div class="row">
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">Newly Confirmed Cases</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.NewConfirmed : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+
+            <highlight-card
+                [label]="'Newly Confirmed Cases'"
+                [value]="globalSummary ? globalSummary.NewConfirmed : null">
+            </highlight-card>
+
         </div>
 
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">Total Confirmed Cases</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.TotalConfirmed : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+            <highlight-card
+                [label]="'Total Confirmed Cases'"
+                [value]="globalSummary ? globalSummary.TotalConfirmed : null">
+            </highlight-card>
         </div>
 
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">New Deaths</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.NewDeaths : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+            <highlight-card
+                [label]="'New Deaths'"
+                [value]="globalSummary ? globalSummary.NewDeaths : null">
+            </highlight-card>
         </div>
 
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">Total Deaths</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.TotalDeaths : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+            <highlight-card
+                [label]="'Total Deaths'"
+                [value]="globalSummary ? globalSummary.TotalDeaths : null">
+            </highlight-card>
         </div>
 
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">New Recoveries</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.NewRecovered : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+            <highlight-card
+                [label]="'New Recoveries'"
+                [value]="globalSummary ? globalSummary.NewRecovered : null">
+            </highlight-card>
         </div>
 
         <div class="col-2">
-            <mat-card class="highlight-card">
-                <h3 class="highlight-card--header">Total Recoveries</h3>
-                <span *ngIf="isSummaryLoaded; else showLoader"
-                    class="highlight-card--value">
-                    {{(globalSummary ? globalSummary.TotalRecovered : 0) |
-                    number:'1.0':'en-US'}}
-                </span>
-                <ng-template #showLoader>
-                    <div class="highlight-card--progress">
-                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-                    </div>
-                </ng-template>
-            </mat-card>
+            <highlight-card
+                [label]="'Total Recoveries'"
+                [value]="globalSummary ? globalSummary.TotalRecovered : null">
+            </highlight-card>
         </div>
 
     </div>
@@ -147,7 +95,7 @@
     <div class="row">
         <div class="col-12">
             <countries-table-card
-            [countries] = "countrySummaries">
+                [countries]="countrySummaries">
             </countries-table-card>
         </div>
     </div>

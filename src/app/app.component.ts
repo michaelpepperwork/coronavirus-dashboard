@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
 
   isLoading = true;
+  date = new Date();
 
   constructor(
     private generalService: GeneralService,

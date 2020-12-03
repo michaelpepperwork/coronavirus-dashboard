@@ -4,10 +4,12 @@ $padding: 3rem;
 $borderRadius: 6px;
 
 mat-card {
+    min-height: 15rem;
+    margin:1rem
 }
 
 .card {
-
+    
     &__header {
         border-bottom: 1px solid var(--cardDividerColor);
         padding: 0rem 2rem;
@@ -33,18 +35,4 @@ mat-card {
     }
 }
 
-.highlight-card {
-    text-align: center;
 
-    &--header {
-        color: var(--lightTextColor);
-    }
-
-    &--value {
-        font-size: 3.5rem;
-    }
-
-    &--progress {
-        margin-top: 2rem;
-    }
-}

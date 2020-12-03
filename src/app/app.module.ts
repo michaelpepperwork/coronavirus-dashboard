@@ -17,6 +17,7 @@ import { CountrySummaryCardComponent } from './ui-components/country-summary-car
 import { LoadingMaskComponent } from './ui-components/loading-mask/loading-mask.component';
 import { CountriesTableCardComponent } from './ui-components/countries-table-card/countries-table-card.component';
 import { CountrySummaryDialogComponent } from './ui-components/country-summary-dialog/country-summary-dialog.component';
+import { HighlightCardComponent } from './ui-components/highlight-card/highlight-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CountrySummaryDialogComponent } from './ui-components/country-summary-d
     CountrySummaryCardComponent,
     LoadingMaskComponent,
     CountriesTableCardComponent,
-    CountrySummaryDialogComponent
+    CountrySummaryDialogComponent,
+    HighlightCardComponent
   ],
   imports: [
     BrowserModule,

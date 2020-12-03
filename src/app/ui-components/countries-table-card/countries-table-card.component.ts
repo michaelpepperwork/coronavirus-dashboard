@@ -20,8 +20,6 @@ export class CountriesTableCardComponent implements OnInit, OnChanges, AfterView
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  selected;
-
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -45,10 +43,6 @@ export class CountriesTableCardComponent implements OnInit, OnChanges, AfterView
       data: {
         country
       }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 

@@ -86,17 +86,17 @@ function findMinMaxTotalCasesAndDeaths(countries: Array<CountrySummary>) {
 
 
 function hasMaxTotalCases(currentCountry: CountrySummary, previousMaxTotalCountry: CountrySummary) {
-    return previousMaxTotalCountry == null || currentCountry.TotalConfirmed > previousMaxTotalCountry.TotalConfirmed;
+    return previousMaxTotalCountry == null || currentCountry.TotalConfirmed >= previousMaxTotalCountry.TotalConfirmed;
 }
 
 function hasMinTotalCases(currentCountry: CountrySummary, previousMinTotalCountry: CountrySummary) {
-    return previousMinTotalCountry == null || currentCountry.TotalConfirmed < previousMinTotalCountry.TotalConfirmed;
+    return previousMinTotalCountry == null || currentCountry.TotalConfirmed <= previousMinTotalCountry.TotalConfirmed;
 }
 
 function hasMaxTotalDeaths(currentCountry: CountrySummary, previousMaxDeathsCountry: CountrySummary) {
-    return previousMaxDeathsCountry == null || currentCountry.TotalDeaths > previousMaxDeathsCountry.TotalDeaths;
+    return previousMaxDeathsCountry == null || currentCountry.TotalDeaths >= previousMaxDeathsCountry.TotalDeaths;
 }
 
 function hasMinTotalDeaths(currentCountry: CountrySummary, previousMinDeathsCountry: CountrySummary) {
-    return previousMinDeathsCountry == null || currentCountry.TotalDeaths < previousMinDeathsCountry.TotalDeaths;
+    return previousMinDeathsCountry == null || currentCountry.TotalDeaths <= previousMinDeathsCountry.TotalDeaths;
 }

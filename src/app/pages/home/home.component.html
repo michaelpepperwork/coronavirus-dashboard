@@ -2,7 +2,7 @@
     <h1 class="section-heading">Global Outlook</h1>
 
     <div class="row">
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
 
             <highlight-card
                 [label]="'Newly Confirmed Cases'"
@@ -11,35 +11,35 @@
 
         </div>
 
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
             <highlight-card
                 [label]="'Total Confirmed Cases'"
                 [value]="globalSummary ? globalSummary.TotalConfirmed : null">
             </highlight-card>
         </div>
 
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
             <highlight-card
                 [label]="'New Deaths'"
                 [value]="globalSummary ? globalSummary.NewDeaths : null">
             </highlight-card>
         </div>
 
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
             <highlight-card
                 [label]="'Total Deaths'"
                 [value]="globalSummary ? globalSummary.TotalDeaths : null">
             </highlight-card>
         </div>
 
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
             <highlight-card
                 [label]="'New Recoveries'"
                 [value]="globalSummary ? globalSummary.NewRecovered : null">
             </highlight-card>
         </div>
 
-        <div class="col-2">
+        <div class="col-sm-4 col-xl-2">
             <highlight-card
                 [label]="'Total Recoveries'"
                 [value]="globalSummary ? globalSummary.TotalRecovered : null">
@@ -53,13 +53,13 @@
     <h1 class="section-heading">Confirmed Cases</h1>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-md">
             <country-summary-card
                 [country]="countryWithMaxTotalCases"
                 [label]="'Most Confirmed Cases'">
             </country-summary-card>
         </div>
-        <div class="col-6">
+        <div class="col-md">
             <country-summary-card
                 [country]="countryWithMinTotalCases"
                 [label]="'Least Confirmed Cases'">
@@ -73,13 +73,13 @@
     <h1 class="section-heading">Death Statistics</h1>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-md">
             <country-summary-card
                 [country]="countryWithMaxTotalDeaths"
                 [label]="'Highest Number of Deaths'">
             </country-summary-card>
         </div>
-        <div class="col-6">
+        <div class="col-md">
             <country-summary-card
                 [country]="countryWithMinTotalDeaths"
                 [label]="'Lowest Number of Deaths'">

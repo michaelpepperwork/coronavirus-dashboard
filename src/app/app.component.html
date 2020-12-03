@@ -1,8 +1,8 @@
 <div *ngIf="!isLoading; else showLoadingMask" class="page-container">
-    <mat-toolbar color="primary">
-        <span>Coronavirus Dashboard</span>
+    <mat-toolbar color="primary" class="toolbar">
+        <span class="toolbar--heading">Coronavirus Dashboard</span>
         <span class="example-spacer"> </span>
-        <span>Date: {{date | date: 'short'}}</span>
+        <span class="toolbar--info">Date: {{date | date: 'short'}}</span>
     </mat-toolbar>
 
     <main class="outlet-container">

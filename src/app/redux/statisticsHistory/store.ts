@@ -59,9 +59,9 @@ function findMaxDeathsAndCasesDates(historicalStatistics: Array<HistoricalStatis
 }
 
 function isMaxDeathsDate(currentRecord: HistoricalStatistic, maxDeathsRecord: HistoricalStatistic) {
-    return maxDeathsRecord == null || currentRecord.Deaths > maxDeathsRecord.Deaths;
+    return maxDeathsRecord == null || currentRecord.Deaths >= maxDeathsRecord.Deaths;
 }
 
 function isMaxConfirmedDate(currentRecord: HistoricalStatistic, maxCasesRecord: HistoricalStatistic) {
-    return maxCasesRecord == null || currentRecord.Confirmed > maxCasesRecord.Confirmed;
+    return maxCasesRecord == null || currentRecord.Confirmed >= maxCasesRecord.Confirmed;
 }

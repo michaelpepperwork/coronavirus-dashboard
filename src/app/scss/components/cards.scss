@@ -5,11 +5,10 @@ $borderRadius: 6px;
 
 mat-card {
     min-height: 15rem;
-    margin:1rem
+    margin: 1rem;
 }
 
 .card {
-    
     &__header {
         border-bottom: 1px solid var(--cardDividerColor);
         padding: 0rem 2rem;
@@ -21,18 +20,31 @@ mat-card {
         display: flex;
         align-items: center;
 
-        &--cta{
+        &--cta {
             margin-left: auto;
             margin-bottom: -3rem;
+
+            @include respond(tab-land) {
+                margin: 0;
+            }
+        }
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            align-items: baseline;
         }
     }
 
-    &__table{
+    &__table {
+        overflow: hidden;
 
-        & table{
+        &--content {
+            overflow: auto;
+        }
+
+        & table {
+            min-width: 100rem;
             width: 100%;
         }
     }
 }
-
-

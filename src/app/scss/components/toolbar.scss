@@ -1,0 +1,20 @@
+@import '../abstracts/mixins.scss';
+
+.toolbar{
+    padding: 1.5rem 2rem !important;
+
+    &--heading{
+
+    }
+
+    &--info{
+        font-size: 1.8rem !important;
+    }
+
+    @include respond(phone) {
+        flex-direction: column !important;
+        align-items: baseline !important;
+        height: auto !important;
+        line-height: 3rem !important;
+    }
+}

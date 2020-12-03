@@ -1,5 +1,4 @@
 export class StatisticsSummary {
-
     NewConfirmed: number;
     TotalConfirmed: number;
     NewDeaths: number;

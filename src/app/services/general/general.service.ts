@@ -11,22 +11,11 @@ import { RoutesPage } from 'src/app/models/routesPage';
 export class GeneralService {
 
   constructor(@Inject('BACKEND_API_URL') private apiUrl: string,
-    private apiService: ApiService,
-    private ngRedux: NgRedux<IAppState>) {
+    private apiService: ApiService) {
   }
 
   loadBaseRoutes$() {
     return this.apiService.get$<RoutesPage>(this.apiUrl, GET_BASE_ROUTES);
   }
 
-  // loadBaseRoutes() {
-  //   this.loadBaseRoutes$().subscribe(
-  //     response => {
-  //       return response;
-  //     },
-  //     error => {
-  //       return error;
-  //     }
-  //   );
-  // }
 }

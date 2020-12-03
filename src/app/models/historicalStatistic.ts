@@ -1,7 +1,5 @@
-import { StatisticsSummary } from './statisticsSummary';
 
 export class HistoricalStatistic  {
-
     Country: string;
     CountryCode: string;
     Province: string;

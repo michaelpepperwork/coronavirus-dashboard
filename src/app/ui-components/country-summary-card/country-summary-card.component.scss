@@ -43,12 +43,11 @@
 
     &__progress-bar {
         height: 1rem;
-        background-color: #9facbd;
+        background-color: var(--lightBackgroundColor);
         border-radius: 1rem;
         margin-bottom: 2rem;
 
         &--bar {
-            background-color: black;
             height: 100%;
             border-radius: inherit;
         }
@@ -62,7 +61,6 @@
         &--icon {
             width: 2rem;
             height: 2rem;
-            background: red;
             margin-right: 1rem;
             border-radius: 4px;
         }
@@ -74,60 +72,60 @@
 
     &.blue-yellow {
         & .statistic__progress-bar {
-            background-color: #ff4081;
+            background-color: var(--accentColor1A);
 
             &--bar {
-                background-color: #0067dc;
+                background-color: var(--accentColor1B);
             }
         }
 
         & .statistic__progress-label--icon {
             &.primary {
-                background-color: #0067dc;
+                background-color: var(--accentColor1B);
             }
 
             &.secondary {
-                background-color: #ff4081;
+                background-color: var(--accentColor1A);
             }
         }
     }
 
     &.red-purple {
         & .statistic__progress-bar {
-            background-color: #a4243b;
+            background-color: var(--accentColor2A);
 
             &--bar {
-                background-color: red;
+                background-color: var(--accentColor2B);
             }
         }
 
         & .statistic__progress-label--icon {
             &.primary {
-                background-color: #a4243b;
+                background-color: var(--accentColor2A);
             }
 
             &.secondary {
-                background-color: red;
+                background-color: var(--accentColor2B);
             }
         }
     }
 
     &.green-grey {
         & .statistic__progress-bar {
-            background-color: #233d4d;
+            background-color: var(--accentColor3A);
 
             &--bar {
-                background-color: #61e294;
+                background-color: var(--accentColor3B);
             }
         }
 
         & .statistic__progress-label--icon {
             &.primary {
-                background-color: #233d4d;
+                background-color: var(--accentColor3A);
             }
 
             &.secondary {
-                background-color: #61e294;
+                background-color: var(--accentColor3B);
             }
         }
     }

@@ -4,7 +4,6 @@ import { CountrySummary } from 'src/app/models/CountrySummary';
 import { GET_COUNTRY_HISTORY } from './actions';
 import { HistoricalStatistic } from 'src/app/models/historicalStatistic';
 
-// tslint:disable-next-line:no-empty-interface
 export interface IStatisticsHistoryState {
     [countrySlug: string]: {
         maxDeathsRecord: HistoricalStatistic;

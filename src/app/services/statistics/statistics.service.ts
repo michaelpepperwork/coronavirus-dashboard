@@ -63,6 +63,8 @@ export class StatisticsService implements OnDestroy {
     let queryURL = this.routes.countryRoute.Path;
     queryURL = this.apiUrl + placeParams(queryURL, { country: countrySlug });
 
+    // The API does not always work as expected with query parameters
+    // Hence .setHours() etc.
     let queryParams = new HttpParams();
     const endDate = new Date(new Date().setHours(0, 0, 0, 0));
     const startDate = new Date((new Date().setDate((endDate.getDate() - numDays - 1))));

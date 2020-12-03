@@ -3,7 +3,6 @@ import { IGeneralState, GENERAL_INITIAL_STATE, generalReducer } from './general/
 import { combineReducers } from 'redux';
 import { STATISTICS_HISTORY_INITIAL_STATE, statisticsHistoryReducer, IStatisticsHistoryState } from './statisticsHistory/store';
 
-// tslint:disable-next-line:no-empty-interface
 export interface IAppState {
     general: IGeneralState;
     statistics: IStatisticsState;

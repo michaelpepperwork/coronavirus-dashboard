@@ -1,0 +1,12 @@
+<mat-card class="highlight-card">
+    <h3 class="highlight-card--header">{{label}}</h3>
+    <span *ngIf="!isLoading; else showLoader"
+        class="highlight-card--value">
+        {{(value ? value : 0) | number:'1.0':'en-US'}}
+    </span>
+    <ng-template #showLoader>
+        <div class="highlight-card--progress">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+    </ng-template>
+</mat-card>

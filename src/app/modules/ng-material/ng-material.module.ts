@@ -4,6 +4,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 
@@ -14,7 +19,12 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatSlideToggleModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatChipsModule
   ]
 })
 export class NgMaterialModule { }

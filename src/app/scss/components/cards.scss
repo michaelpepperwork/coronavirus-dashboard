@@ -4,20 +4,35 @@ $padding: 3rem;
 $borderRadius: 6px;
 
 mat-card {
+    min-height: 15rem;
+    margin:1rem
 }
 
-.highlight-card {
-    text-align: center;
+.card {
+    
+    &__header {
+        border-bottom: 1px solid var(--cardDividerColor);
+        padding: 0rem 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+        font-weight: 500 !important;
+        color: var(--darkTextColor);
+        font-size: 2.2rem !important;
+        display: flex;
+        align-items: center;
 
-    &--header {
-        color: var(--lightTextColor);
+        &--cta{
+            margin-left: auto;
+            margin-bottom: -3rem;
+        }
     }
 
-    &--value {
-        font-size: 3.5rem;
-    }
+    &__table{
 
-    &--progress{
-        margin-top: 2rem;
+        & table{
+            width: 100%;
+        }
     }
 }
+
+

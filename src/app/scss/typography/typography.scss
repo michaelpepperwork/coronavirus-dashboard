@@ -40,3 +40,13 @@ h6{
     text-transform: uppercase;
     letter-spacing: 1px !important;
 }
+
+.clickable-link{
+    color:var(--linkTextColor);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--darkTextColor);
+    }
+}

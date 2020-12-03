@@ -1,0 +1,2 @@
+export const GET_COUNTRY_HISTORY: string = 'GET_COUNTRY_HISTORY';
+

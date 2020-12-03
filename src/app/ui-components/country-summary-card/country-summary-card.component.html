@@ -1,10 +1,10 @@
-<mat-card class="country-card">
+<mat-card class="country-card card">
     <loading-mask *ngIf="isLoading; else showStatistics">
     </loading-mask>
 
 
     <ng-template #showStatistics>
-        <h3 class="country-card__header">
+        <h3 class="country-card__header card__header">
             <span class="country-card__header--country">{{country.Country}}</span>
             <span class="country-card__header--label">({{label}})</span>
         </h3>
